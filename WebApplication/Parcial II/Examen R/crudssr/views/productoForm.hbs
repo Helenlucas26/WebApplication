@@ -1,0 +1,42 @@
+<div class="container">
+    <br>
+
+    <form action="/productoForm/producto/operar" method="POST">
+        <input type="hidden" name="_id" value={{producto._id}}>
+        <div class="form-group">
+            <label for="nombre">Fecha</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" value="{{producto.fecha}}">
+        </div>
+        <div class="form-group">
+            <label for="precio">Hora</label>
+            <input type="text" class="form-control" id="precio" name="precio" value={{producto.hora}}>
+        </div>
+        <div class="form-group">
+            <label for="costo">Cantidad</label>
+            <input type="text" class="form-control" id="costo" name="costo" value={{producto.cantidad}}>
+        </div>
+        <div class="form-group">
+            <label for="minimo">Costo</label>
+            <input type="text" class="form-control" id="minimo" name="minimo" value={{producto.costo}}>
+        </div>
+        <div class="form-group">
+            <label for="time">Tiempo</label>
+            <input type="text" class="form-control" id="time" name="time" value={{producto.tiempo}}>
+        </div>
+        <div class="form-group">
+            <label for="data1">ID cocinero</label>
+            <input type="text" class="form-control" id="data1" name="data1" value={{producto.cocinero}}>
+        </div>
+        <div class="form-group">
+            <label for="data2">ID receta</label>
+            <input type="text" class="form-control" id="data2" name="data2" value={{producto.receta}}>
+        </div>
+        
+
+        <button type="submit" class="btn btn-primary" >Aceptar</button>
+        <a href="/" class="btn btn-danger" >Cancelar</a>
+        
+
+    </form>
+
+</div>

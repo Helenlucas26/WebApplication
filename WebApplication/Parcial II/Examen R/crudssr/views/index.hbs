@@ -1,0 +1,88 @@
+<div class="container">
+
+
+    <div class="row">
+        <br/>
+        <a href="/producto/nuevo" class="btn btn-primary" >Nuevo</a>
+        <table class="table table-striped">
+            <thead>
+                <h1>Entidad transaccional Preparacion </h1>
+                <th>Id</th>
+                <th>fecha</th>
+                <th>hora</th>
+                <th>cantidad</th>
+                <th>costo</th>
+                <th>tiempo</th>
+                <th colspan="2" >Opciones</th>
+            </thead>
+            {{#each productos  }}
+                   
+            <tr>
+              
+                <td>{{this._id}}</td>
+                <td>{{this.fecha}}</td>
+                <td>{{this.hora}}</td>
+                <td>{{this.cantidad}}</td>
+                <td>{{this.costo}}</td>
+                <td>{{this.tiempo}}</td>
+                <td><a href="/producto/modificar/{{this._id}}">Modificar</a></td>
+                <td><a href="/producto/eliminar/{{this._id}}">Eliminar</a></td>
+
+            </tr>
+
+            <div>
+            {{/each}}
+
+                      <table class="table table-striped">
+            <thead>
+                <h1>Entidad maestra Cocinero</h1>
+                <th>Id cocinero</th>
+                <th>Nombre cocinero</th>
+                <th>Sueldo cocinero</th>
+                
+              
+            </thead>
+            {{#each cocineros  }}
+
+                   
+            <tr>
+               
+                <td>{{this._id}}</td>
+                <td>{{this.nombre}}</td>
+                <td>{{this.sueldo}}</td>
+            </tr>
+            {{/each}}
+
+             <table class="table table-striped">
+            <thead>
+                <h1>Entidad maestra Receta</h1>
+                <th>Id receta</th>
+                <th>Nombre receta</th>
+                <th>Ingredientes receta</th>
+                <th>Cantidades receta</th>
+                
+              
+            </thead>
+            {{#each recetas  }}
+
+                   
+            <tr>
+              
+                <td>{{this._id}}</td>
+                <td>{{this.nombre}}</td>
+                <td>{{this.ingredientes}}</td>
+                <td>{{this.cantidades}}</td>
+            </tr>
+            {{/each}}
+
+
+            
+
+            
+
+    
+    </div>
+
+
+
+</div>
